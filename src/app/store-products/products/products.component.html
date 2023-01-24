@@ -6,13 +6,15 @@
   <div *ngFor="let product of productEntities$ | async" class="product-card">
     <mat-card class="example-card">
       <mat-card-header>
-        <mat-card-title>{{product.title}}</mat-card-title>
-        <mat-card-subtitle>{{product.price}}</mat-card-subtitle>
+        <img mat-card-image src="{{product.image}}" alt="Photo of a Shiba Inu" class="product-image">
+
       </mat-card-header>
-      <img mat-card-image src="{{product.image}}" alt="Photo of a Shiba Inu">
+      <mat-card-title>{{product.title | slice:0:10}}</mat-card-title>
+      <mat-card-subtitle>${{product.price}}</mat-card-subtitle>
       <mat-card-content>
         <p>
-          {{product.description}}
+          {{  (product.description|slice:0:100) + "..."}} <!-- TRUNCATE PIPE https://stackoverflow.com/questions/44669340/how-to-truncate-text-in-angular2-->
+
         </p>
         <hr>
         {{product.category}}
