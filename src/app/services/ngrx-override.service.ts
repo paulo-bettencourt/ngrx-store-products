@@ -15,12 +15,12 @@ import {Constants} from "../config/constants";
 export class TestDataService extends DefaultDataService<Product> {
 
   constructor(http: HttpClient, httpUrlGenerator: HttpUrlGenerator, logger: Logger, private constants: Constants) {
-    super('Hero', http, httpUrlGenerator);
-    logger.log('Created custom Hero EntityDataService');
+    super('Product', http, httpUrlGenerator);
+    logger.log('Created custom Product EntityDataService');
   }
 
-  override getAll(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.constants.API_ENDPOINT);
-  }
+//  override getAll(): Observable<Product[]> {
+//    return this.http.get<Product[]>('this.constants.API_ENDPOINT');
+//  }
 
 }

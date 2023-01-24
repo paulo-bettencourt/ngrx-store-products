@@ -11,7 +11,7 @@ export class ApiService {
 
   constructor(private _http: HttpClient, private _constants: Constants) {}
 
-  getProducts(): Observable<Product[]> {
-    return this._http.get<Product[]>(this._constants.API_ENDPOINT);
-  }
+//  getProducts(): Observable<Product[]> {
+//    return this._http.get<Product[]>(this._constants.API_ENDPOINT);
+//  }
 }

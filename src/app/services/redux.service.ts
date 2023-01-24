@@ -4,16 +4,11 @@ import {
   EntityCollectionServiceElementsFactory, EntityDataService
 } from '@ngrx/data';
 import {Product} from "../interfaces/product.interface";
-import {TestDataService} from "./ngrx-override.service";
-
 
 @Injectable({ providedIn: 'root' })
-export class HeroService extends EntityCollectionServiceBase<Product> {
-  constructor(serviceElementsFactory: EntityCollectionServiceElementsFactory,
-              private entityDataService: EntityDataService,
-              private newService: TestDataService
+export class ProductReduxService extends EntityCollectionServiceBase<Product> {
+  constructor(serviceElementsFactory: EntityCollectionServiceElementsFactory
   ) {
     super('Product', serviceElementsFactory);
-    this.entityDataService.registerService("DidDocument", this.newService);
   }
 }
