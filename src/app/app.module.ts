@@ -7,11 +7,17 @@ import {Constants} from "./config/constants";
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
-import { EntityDataModule } from '@ngrx/data';
-import { entityConfig } from './entity-metadata';
+import {DefaultDataServiceConfig, EntityDataModule} from '@ngrx/data';
+import { entityConfig } from './ngrx-store-data/entity-metadata';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import {TestDataService} from "./services/ngrx-override.service";
+
+const defaultDataServiceConfig: DefaultDataServiceConfig = {
+  root: 'https://fakestoreapi.com/products',
+  timeout: 3000, // request timeout
+}
 
 @NgModule({
   declarations: [
@@ -36,7 +42,11 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
       }
     })
   ],
-  providers: [Constants],
+  providers: [
+    Constants,
+    { provide: DefaultDataServiceConfig, useValue: defaultDataServiceConfig },
+    TestDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
