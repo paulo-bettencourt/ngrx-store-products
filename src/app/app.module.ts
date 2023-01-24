@@ -2,14 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {Constants} from "./config/constants";
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import {
   DefaultDataServiceConfig,
   EntityDataModule,
-  EntityDataService,
   EntityMetadataMap,
   HttpUrlGenerator
 } from '@ngrx/data';
@@ -24,9 +22,7 @@ const defaultDataServiceConfig: DefaultDataServiceConfig = {
 }
 
 export const entityMetadata: EntityMetadataMap = {
-  Product: {
-    entityName: 'Product'
-  }
+  Product: {}
 }
 
 
@@ -46,13 +42,10 @@ export const entityMetadata: EntityMetadataMap = {
     StoreDevtoolsModule.instrument(),
   ],
   providers: [
-    Constants,
     { provide: DefaultDataServiceConfig, useValue: defaultDataServiceConfig },
     { provide: HttpUrlGenerator, useClass: PluralHttpUrlGenerator }
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-//  constructor(private entityDataService: EntityDataService, private productDataService: TestDataService) {
-//    this.entityDataService.registerService("Product", this.productDataService); }
 }

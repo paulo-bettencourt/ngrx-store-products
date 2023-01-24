@@ -1,9 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiService} from "../../services/api.service";
 import {Observable} from "rxjs";
 import {Product} from "../../interfaces/product.interface";
 import {ProductReduxService} from "../../services/redux.service";
-import {TestDataService} from "../../services/ngrx-override.service";
 
 @Component({
   selector: 'app-products',
@@ -12,24 +10,23 @@ import {TestDataService} from "../../services/ngrx-override.service";
 })
 export class ProductsComponent {
 
-  products$!: Observable<Product[]>;
   loading$!: Observable<boolean>;
-  heroes$!: Observable<Product[]>;
+  productEntities$!: Observable<Product[]>;
 
-  constructor(private _service: ApiService, private productsService: ProductReduxService ) {
-    this.heroes$ = productsService.entities$;
+  constructor(private productsService: ProductReduxService ) {
+    this.productEntities$ = productsService.entities$;
     this.loading$ = productsService.loading$;
   }
 
   ngOnInit() {
-    this.products$ = this.productsService.getAll();
+    this.productsService.getAll();
   }
 
   add(product: Product) {
     this.productsService.add(product);
   }
 
-  delete(id: any) {
+  delete(id: number) {
     this.productsService.delete(id);
   }
 
@@ -37,9 +34,8 @@ export class ProductsComponent {
     return this.productsService.getAll();
   }
 
-  update(hero: Product) {
-    this.productsService.update(hero);
+  update(product: Product) {
+    this.productsService.update(product);
   }
-
 
 }

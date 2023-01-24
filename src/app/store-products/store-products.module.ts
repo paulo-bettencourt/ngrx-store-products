@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './products/products.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
-import {Component} from '@angular/core';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,8 @@ import {Component} from '@angular/core';
   imports: [
     CommonModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatProgressSpinnerModule
   ]
 })
 export class StoreProductsModule { }
