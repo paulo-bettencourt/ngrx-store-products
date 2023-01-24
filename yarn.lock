@@ -1360,6 +1360,48 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz#b2ac626d6cb9c8718ab459166d4bb405b8ffa78b"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
+"@ngrx/component-store@^15.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/component-store/-/component-store-15.1.0.tgz#090969292965dfb57eba68c8989849645519991e"
+  integrity sha512-aqNxZHWdHAgnxz5cdBLKmWq83PVKw9F4ZMVddsZ7d8Ow2j3BWZiYP65hPVgVpzTHuigpE4OX0cutwGC38iu1GA==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/data@^15.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/data/-/data-15.1.0.tgz#de14783e10a484b4823e4e1fbc98e2035a580715"
+  integrity sha512-3bwF2Xc/RCUrIZFkQeIUHSnExaie/PUD4wT6R9RnJVi6Pfgz3OhJEsTvDQf6jjoXhidp+8ddzv7rZpnbIRqOOg==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/effects@^15.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-15.1.0.tgz#af62b690cbc58338d1332e3c15cf0bfcec401653"
+  integrity sha512-/8YnhzyAOTdI9RYJAqmIIvh8ip4M4x4DrRyrdDDc62oFM3TrVOvknUUpMp5NxKpKph8hSpevAwaeEBDWGnKkjg==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/entity@^15.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-15.1.0.tgz#fd2d439c5a9d3d87028bb60f0b47fec84e8e32bd"
+  integrity sha512-CvE51HR+m5Nhbh4Sr3rDcm93kGZBkbrsVsRf1HR0V7e03Y87IycAEM2loveT7pELLO3+LlZAwWUxVl1HIO/7hg==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/router-store@^15.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/router-store/-/router-store-15.1.0.tgz#fae15783b1f7ba9f0b2888ba30b04cf5e5dbe5ae"
+  integrity sha512-XvRBGRRynJfhcNBDLPqo42srwgxJ5+FNslPYjGdo4vU5PVA6YplR0AN1kihHYkVWJSq0IJZ85vxtK9JdyHQg/Q==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/store@^15.1.0":
+  version "15.1.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-15.1.0.tgz#fc813ef4e8ea3a4ec642633888e30fbd9adcde6d"
+  integrity sha512-Wxjme7yJnxD6il6fGZdFTdSs9gL+6OFW8/II9vApFokUb0E7UQBm8RYb9dYJ2IQJvWXwO+2ItSaecRUZgt39kA==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngtools/webpack@15.1.2":
   version "15.1.2"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-15.1.2.tgz#dd331f1b496383376576ec1c1506788e90365afa"
@@ -5528,7 +5570,7 @@ tree-kill@1.2.2:
   resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
-tslib@2.4.1, tslib@^2.1.0, tslib@^2.3.0:
+tslib@2.4.1, tslib@^2.0.0, tslib@^2.1.0, tslib@^2.3.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.4.1.tgz#0d0bfbaac2880b91e22df0768e55be9753a5b17e"
   integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==
