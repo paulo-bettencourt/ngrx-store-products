@@ -29,8 +29,8 @@ export class ProductsComponent {
     this.productsService.add(product);
   }
 
-  delete(product: Product) {
-    this.productsService.delete(product.id);
+  delete(id: any) {
+    this.productsService.delete(id);
   }
 
   getProducts() {
