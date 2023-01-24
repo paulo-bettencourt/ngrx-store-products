@@ -10,7 +10,7 @@ import {Product} from "../../interfaces/product.interface";
 })
 export class ProductsComponent {
 
-  products$!: Observable<any>;
+  products$!: Observable<Product[]>;
 
   constructor(private _service: ApiService) {
     this.products$ = this._service.getProducts();

@@ -2,11 +2,6 @@
   max-width: 400px;
 }
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
-
 .product-container {
   display: flex;
   flex-direction: row;
@@ -18,8 +13,6 @@
 .product-card {
   max-height: 100%;
   width: 300px;
-  padding: 2%;
-  margin: 2%;
-  border: 1px solid grey;
+  margin: 0.3%;
   border-radius: 15px;
 }
