@@ -1,0 +1,16 @@
+<div class="update-container" [formGroup]="form">
+  <form>
+    <mat-form-field class="example-full-width">
+      <mat-label>Favorite food</mat-label>
+      <input matInput placeholder="Ex. Pizza" formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Leave a comment</mat-label>
+      <textarea matInput placeholder="Ex. It makes me feel..." formControlName="description"></textarea>
+    </mat-form-field>
+  </form>
+
+</div>
+
+<button (click)="updateApiRequest()">Submit</button>
