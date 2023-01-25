@@ -18,11 +18,11 @@
         </p>
         <hr>
         {{product.category}}
-        {{product.rating.rate}}
-        {{product.rating.count}}
+        {{product.rating?.rate}}
+        {{product.rating?.count}}
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button>BUY</button>
+        <button mat-button (click)="getByKey(product.id)">UPDATE</button>
         <button mat-button (click)="delete(product.id)">DELETE</button>
       </mat-card-actions>
     </mat-card>

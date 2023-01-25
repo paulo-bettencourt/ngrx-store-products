@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
 import {Product} from "../../interfaces/product.interface";
 import {ProductReduxService} from "../../services/redux.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-products',
@@ -13,7 +14,7 @@ export class ProductsComponent {
   loading$!: Observable<boolean>;
   productEntities$!: Observable<Product[]>;
 
-  constructor(private productsService: ProductReduxService ) {
+  constructor(private productsService: ProductReduxService, private _router: Router) {
     this.productEntities$ = productsService.entities$;
     this.loading$ = productsService.loading$;
   }
@@ -36,6 +37,10 @@ export class ProductsComponent {
 
   update(product: Product) {
     this.productsService.update(product);
+  }
+
+  getByKey(id: number) {
+    this._router.navigate(['/update', id]);
   }
 
 }
