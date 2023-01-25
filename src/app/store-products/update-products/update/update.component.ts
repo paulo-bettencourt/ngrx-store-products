@@ -36,8 +36,7 @@ export class UpdateComponent {
 
   getByKey(id: number) {
     this.productsService.getByKey(id).subscribe((data: Product) => {
-        this.updatedProduct = data;
-      console.log('produto final ', this.updatedProduct)
+      this.updatedProduct = data;
       this.updateProductOnForm();
     })
   }
@@ -52,23 +51,21 @@ export class UpdateComponent {
   }
 
   updateApiRequest() {
-    console.log("updateApiRequest, obj is true")
-    const id = this.updatedProduct.id;
-    const title = this.form.controls['title'].value;
-    const category = this.form.controls['category'].value;
-    const description = this.form.controls['description'].value;
-    const image = this.form.controls['image'].value;
-    const price = this.form.controls['price'].value;
+    const idValue = this.updatedProduct.id;
+    const titleFormValue = this.form.controls['title'].value;
+    const categoryFormValue = this.form.controls['category'].value;
+    const descriptionFormValue = this.form.controls['description'].value;
+    const imageFormValue = this.form.controls['image'].value;
+    const priceFormValue = this.form.controls['price'].value;
 
-    if(id && title && category && description && image && price) {
-      console.log("obj is true")
+    if(idValue && titleFormValue && categoryFormValue && descriptionFormValue && imageFormValue && priceFormValue) {
       this.newProduct = {
-        category: category,
-        description: description,
-        id: id,
-        image: image,
-        price: 0,
-        title: 'LOREM PISPUM'
+        id: idValue,
+        title: titleFormValue,
+        category: categoryFormValue,
+        description: descriptionFormValue,
+        image: imageFormValue,
+        price: 0
       }
     }
     this.productsService.update(this.newProduct);
