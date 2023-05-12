@@ -1,6 +1,14 @@
 # NgrxStoreProducts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
+This project was generated with [Angular CLI] version 15.1.1 while using state management NgRx (Redux).
+
+The app features all CRUD operations and the Rest API requests are done using the `https://fakestoreapi.com` server.
+
+## Screenshots
+
+![Screenshot 2023-05-12 at 10 15 29](https://github.com/paulo-bettencourt/ngrx-store-products/assets/37920932/750740da-bb1d-4001-ac81-030f00fac62b)
+
+![Screenshot 2023-05-12 at 10 18 50](https://github.com/paulo-bettencourt/ngrx-store-products/assets/37920932/2595bfa0-e92b-491f-8e6a-98b35e662ec4)
 
 ## Development server
 
